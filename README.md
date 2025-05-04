@@ -26,3 +26,42 @@ Coletar, processar e visualizar logs de execução de jobs do Databricks, com o 
 
 ## 📂 Estrutura do Projeto
 
+
+
+---
+
+## 📈 Funcionalidades
+
+- Filtro de data para visualização dos logs por período
+- Gráfico de **duração média por `job_id`**
+- Gráfico de **execuções por dia**, segmentadas por status (`SUCCESS`, `FAILED`)
+- Métricas gerais:
+  - Média de duração
+  - Total de execuções
+  - Quantidade de falhas
+- **Sistema de alerta automático** se houver falhas nos jobs
+
+---
+
+## ⚠️ Sistema de Alerta
+
+O dashboard analisa o campo `result_state` dos logs.  
+Se houver qualquer execução com o valor `"FAILED"` dentro do período selecionado, um alerta visual é exibido:
+
+
+
+
+
+
+Isso permite a identificação rápida de execuções que falharam e precisam ser reprocessadas ou analisadas.
+
+---
+
+## ▶️ Como Executar o Projeto
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/databricks-job-monitoring.git
+cd databricks-job-monitoring
+
